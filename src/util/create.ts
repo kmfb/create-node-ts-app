@@ -8,7 +8,7 @@ import {
   modifyJsonFile,
 } from '../util';
 import * as shell from 'shelljs';
-import { resolve } from 'path';
+
 import { blue, cyan, gray, yellow } from 'chalk';
 import { prompt } from 'inquirer';
 import * as installFeatureMethod from './installFeature';
@@ -23,7 +23,6 @@ export const isDirExist = (dirName): void => {
 };
 
 export const initProjectDir = (projectName) => {
-  const dirPath = getProjectPath(projectName);
   shell.exec(`mkdir ${projectName}`);
   shell.cd(projectName);
   shell.exec(`mkdir src`);

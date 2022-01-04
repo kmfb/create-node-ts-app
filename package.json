@@ -1,6 +1,6 @@
 {
   "name": "@kmfb/create-node-ts-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "create-node-ts-app",
   "main": "./lib/index.js",
   "keywords": [

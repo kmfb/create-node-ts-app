@@ -1,8 +1,23 @@
 {
-  "name": "create-node-ts-app",
+  "name": "@kmfb/create-node-ts-app",
   "version": "1.0.0",
   "description": "create-node-ts-app",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "keywords": [
+    "typescript",
+    "cli",
+    "typescript 脚手架",
+    "ts 脚手架",
+    "ts-cli",
+    "脚手架",
+    "node",
+    "create-node-ts-app"
+  ],
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:comment": "启动开发环境",
@@ -17,8 +32,7 @@
     "build:comment": "构建",
     "build": "npm run eslint && npm run prettier && rm -rf lib && tsc --build"
   },
-  "keywords": [],
-  "author": "",
+  "author": "kmfb",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^16.0.1",

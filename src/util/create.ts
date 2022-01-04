@@ -12,7 +12,7 @@ import { resolve } from 'path';
 import { blue, cyan, gray, yellow } from 'chalk';
 import { prompt } from 'inquirer';
 import * as installFeatureMethod from './installFeature';
-import { gitignore } from '../constants';
+import { gitignore, vscodeSettings } from '../constants';
 
 export const isDirExist = (dirName): void => {
   const dirPath = getProjectPath(dirName);
@@ -27,14 +27,13 @@ export const initProjectDir = (projectName) => {
   shell.exec(`mkdir ${projectName}`);
   shell.cd(projectName);
   shell.exec(`mkdir src`);
+  shell.exec(`mkdir .vscode`);
   const indexJsContent = `console.log('hello, world!')`;
   writeFileSync('./src/index.ts', indexJsContent, { encoding: 'utf-8' });
   shell.exec(`npm init -y`);
-  shell.cp(
-    '-r',
-    resolve(global.__APP_PATH, '.vscode'),
-    resolve(dirPath, '.vscode'),
-  );
+  writeFileSync('./.vscode/settings.json', vscodeSettings, {
+    encoding: 'utf-8',
+  });
   writeFileSync('./.gitignore', gitignore, { encoding: 'utf-8' });
 };
 

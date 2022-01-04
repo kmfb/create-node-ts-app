@@ -63,3 +63,11 @@ export const commitlint = `module.exports = {
 };`;
 
 export const gitignore = `node_modules\n.eslintcache\nlib`;
+
+export const vscodeSettings = `{
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2
+}`;

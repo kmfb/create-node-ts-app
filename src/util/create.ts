@@ -17,8 +17,8 @@ import { gitignore } from '../constants';
 export const isDirExist = (dirName): void => {
   const dirPath = getProjectPath(dirName);
   if (existsSync(dirPath)) {
-    shell.rm('-rf', dirPath);
-    // process.exit(1)
+    // shell.rm('-rf', dirPath);
+    process.exit(1);
   }
 };
 
